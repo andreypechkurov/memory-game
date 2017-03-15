@@ -49,7 +49,7 @@ public class MenuFragment extends Fragment {
 		mGooglePlayGameButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getActivity(), "Leaderboards will be available in the next game updates", Toast.LENGTH_LONG).show();
+				Toast.makeText(getActivity(), "Leaderboards are not available in demo app", Toast.LENGTH_LONG).show();
 			}
 		});
 		mStartButtonLights = (ImageView) view.findViewById(R.id.start_game_button_lights);

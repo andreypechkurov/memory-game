@@ -13,7 +13,7 @@ public class FontLoader {
 	private static boolean fontsLoaded = false;
 
 	public static enum Font {
-		GROBOLD(FontLoader.GROBOLD, "fonts/grobold.ttf");
+		PASSIONONE(FontLoader.GROBOLD, "fonts/passionone.ttf");
 
 		private int val;
 		private String path;

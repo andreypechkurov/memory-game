@@ -25,12 +25,9 @@ public class ThemeSelectFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = LayoutInflater.from(Shared.context).inflate(R.layout.theme_select_fragment, container, false);
 		View animals = view.findViewById(R.id.theme_animals_container);
-		View monsters = view.findViewById(R.id.theme_monsters_container);
 
 		final Theme themeAnimals = Themes.createAnimalsTheme();
 		setStars((ImageView) animals.findViewById(R.id.theme_animals), themeAnimals, "animals");
-		final Theme themeMonsters = Themes.createMosterTheme();
-		setStars((ImageView) monsters.findViewById(R.id.theme_monsters), themeMonsters, "monsters");
 
 		animals.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -39,18 +36,10 @@ public class ThemeSelectFragment extends Fragment {
 			}
 		});
 
-		monsters.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Shared.eventBus.notify(new ThemeSelectedEvent(themeMonsters));
-			}
-		});
-
 		/**
-		 * Imporove performance first!!!
+		 * Improve performance first!!!
 		 */
 		animateShow(animals);
-		animateShow(monsters);
 
 		return view;
 	}
