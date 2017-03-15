@@ -11,15 +11,15 @@ public class Themes {
 
 	public static String URI_DRAWABLE = "drawable://";
 
-	public static Theme createAnimalsTheme() {
+	public static Theme createMosterTheme() {
 		Theme theme = new Theme();
-		theme.id = 1;
-		theme.name = "Animals";
-		theme.backgroundImageUrl = URI_DRAWABLE + "back_animals";
+		theme.id = 2;
+		theme.name = "Mosters";
+		theme.backgroundImageUrl = URI_DRAWABLE + "back_horror";
 		theme.tileImageUrls = new ArrayList<String>();
 		// 40 drawables
-		for (int i = 1; i <= 28; i++) {
-			theme.tileImageUrls.add(URI_DRAWABLE + String.format("animals_%d", i));
+		for (int i = 1; i <= 40; i++) {
+			theme.tileImageUrls.add(URI_DRAWABLE + String.format("mosters_%d", i));
 		}
 		return theme;
 	}
