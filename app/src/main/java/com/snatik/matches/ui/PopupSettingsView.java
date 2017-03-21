@@ -1,8 +1,6 @@
 package com.snatik.matches.ui;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +11,6 @@ import android.widget.Toast;
 
 import com.snatik.matches.R;
 import com.snatik.matches.common.Music;
-import com.snatik.matches.common.Shared;
 import com.snatik.matches.utils.FontLoader;
 import com.snatik.matches.utils.FontLoader.Font;
 
@@ -33,7 +30,7 @@ public class PopupSettingsView extends LinearLayout {
 		LayoutInflater.from(getContext()).inflate(R.layout.popup_settings_view, this, true);
 		mSoundText = (TextView) findViewById(R.id.sound_off_text);
 		TextView rateView = (TextView) findViewById(R.id.rate_text);
-		FontLoader.setTypeface(context, new TextView[] { mSoundText, rateView }, Font.PASSIONONE);
+		FontLoader.setTypeface(context, new TextView[] { mSoundText, rateView }, Font.GROBOLD);
 		mSoundImage = (ImageView) findViewById(R.id.sound_image);
 		View soundOff = findViewById(R.id.sound_off);
 		soundOff.setOnClickListener(new View.OnClickListener() {
